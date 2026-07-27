@@ -8,8 +8,12 @@ on:
         required: true
         default: 'World'
 
-  repository_dispatch:
-      types: [custom-event]
+  workflow_call:
+    inputs:
+      name:
+        type: string
+        required: true
+        default: 'World'
 
 jobs:
   say-hello:
