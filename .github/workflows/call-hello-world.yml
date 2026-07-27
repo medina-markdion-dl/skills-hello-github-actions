@@ -1,0 +1,10 @@
+name: Call Hello World
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-hello-world:
+    uses: medina-markdion-dl/skills-hello-github-actions/.github/workflows/hello-world.yml@main
+    with:
+      name: 'Caller'
