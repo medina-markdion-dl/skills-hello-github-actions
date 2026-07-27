@@ -2,6 +2,11 @@ name: Hello World
 
 on:
   workflow_dispatch:
+    inputs:
+      name:
+        type: string
+        required: true
+        default: 'World'
 
   repository_dispatch:
       types: [custom-event]
