@@ -3,6 +3,9 @@ name: Hello World
 on:
   workflow_dispatch:
 
+  repository_dispatch:
+      types: [custom-event]
+
 jobs:
   say-hello:
     runs-on: ubuntu-latest
