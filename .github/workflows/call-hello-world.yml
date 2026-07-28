@@ -7,5 +7,5 @@ jobs:
   call-hello-world:
     uses: medina-markdion-dl/skills-hello-github-actions/.github/workflows/hello-world.yml@main
     with:
-      # name: 'Caller'
-      name: ${{ github.repository }}
+      name: 'Caller'
+      # name: ${{ github.repository }}
