@@ -32,7 +32,7 @@ jobs:
           # 現在日時を取得
           now=$(date +%s)
           # 5分 = 300秒; + 150：次の300秒に切り上げる
-          rounded=$(( (now + 150) / 300 * 300 ))
+          rounded=$(( now / 300 * 300 ))
           # YYYYMMDD_HHMM 形式に変更
           tag=$(date -d "@$rounded" +%Y%m%d_%H%M)
           echo "tag=$tag" >> $GITHUB_OUTPUT
