@@ -25,11 +25,11 @@ jobs:
 
       - name: Get date and time 
         id: timestamp
-        env:
-          TZ: 'Asia/Tokyo'
+        # env:
+        #   TZ: 'Asia/Tokyo'
         run: |
+          export TZ="Asia/Tokyo"
           now=$(date +%s)
-          echo "$(date +%Y%m%d_%H%M)"
           rounded=$(( (now + 150) / 300 * 300 ))
           tag=$(date -u -d "@$rounded" +'%Y%m%d_%H%M')
           echo "tag=$tag" >> $GITHUB_OUTPUT
