@@ -29,7 +29,7 @@ jobs:
           TZ: 'Asia/Tokyo'
         run: |
           now=$(date +%s)
-          echo "$now"
+          echo "$(now +%Y%m%d_%H%M)"
           rounded=$(( (now + 150) / 300 * 300 ))
           tag=$(date -u -d "@$rounded" +'%Y%m%d_%H%M')
           echo "tag=$tag" >> $GITHUB_OUTPUT
