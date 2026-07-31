@@ -28,7 +28,7 @@ jobs:
         # env:
         #   TZ: 'Asia/Tokyo'
         run: |
-          export TZ="Asia/Tokyo"
+          export TZ='Asia/Tokyo'
           now=$(date +%s)
           rounded=$(( (now + 150) / 300 * 300 ))
           tag=$(date -u -d "@$rounded" +'%Y%m%d_%H%M')
