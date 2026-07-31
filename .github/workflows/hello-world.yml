@@ -27,7 +27,11 @@ jobs:
         id: timestamp
         env:
           TZ: 'Asia/Tokyo'
-        run: echo "tag=$(date +'%Y%m%d_%H%M')" >> $GITHUB_OUTPUT
+        # run: echo "tag=$(date +'%Y%m%d_%H%M')" >> $GITHUB_OUTPUT
+        run: |
+          now=$(date +$s)
+          rounded=$(( (now + 150) / 300 * 300 ))
+          tag=$(date -u -d "@$rounded" +'%Y%m%d_%H%M') >> $GITHUB_OUTPUT
 
       - name: Print Hello World
         run: |
